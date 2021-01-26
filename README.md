@@ -8,7 +8,7 @@
 
 1. Загружаем изображение
 
-   fn = 'sea.jpg' #an absolute path to an image file
+   fn = 'sea.jpg' #an absolute path to an image file\n
    frame = cv.imread(fn)
 
  2. Меняем цветовую схему изображения на HSV, что позволит корректно использовать пороговые операции
