@@ -33,8 +33,8 @@
 
    * arclen = cv.arcLength(cnt, True)
    * eps = 0.0005
-   epsilon = arclen * eps
-   approx = cv.approxPolyDP(cnt, epsilon, True)
+   * epsilon = arclen * eps
+   * approx = cv.approxPolyDP(cnt, epsilon, True)
 
 ## 7. Отображаем контур на исходном изображении
 
