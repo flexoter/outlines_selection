@@ -19,12 +19,15 @@ fn = 'content/sea.jpg' # путь к файлу с картинкой
 frame = cv.imread(fn)
 
 hsv = cv.cvtColor(frame, cv.COLOR_BGR2HSV)
+cv.imwrite('content/hsv_image.jpg', hsv)
 
 lower = np.array([40, 60, 0])
 upper = np.array([100, 120, 100])
 
 mask = cv.inRange(hsv, lower, upper)
+cv.imwrite('content/mask_for_bitwise.jpg', mask)
 res = cv.bitwise_and(frame, frame, mask = mask)
+cv.imwrite('content/threshhold_image.jpg', res)
 
 # find contours without approx
 cnts = cv.findContours(mask.copy(), cv.RETR_LIST, cv.CHAIN_APPROX_NONE)[-2]
